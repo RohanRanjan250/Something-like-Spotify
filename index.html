@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Music Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+</head>
+<body>
+
+    <h1>🎵 Spotify Music Search</h1>
+    <!-- <button onclick="authenticateSpotify()">🔑 Login to Spotify</button> -->
+
+    <input type="text" id="searchInput" placeholder="Search for a song...">
+    <button onclick="searchSpotify()">Search</button>
+
+    <h2>🎶 Search Results</h2>
+    <div class="results" id="results"></div>
+
+    <!-- <div class="Create_Playlist">
+        <h2>📂 Create Playlist</h2>
+        <input type="text" id="playlistName" placeholder="Enter playlist name">
+        <button onclick="handleCreatePlaylist()">Create</button>
+    </div> -->
+
+    <h2>📺 Now Playing</h2>
+    <div id="player"></div>
+
+    <h2>❤️ Liked Songs</h2>
+    <div id="likedSongs"></div>
+
+
+    <script src="index.js"></script>
+    <script>
+        let tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        let firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+    
+</body>
+</html>
